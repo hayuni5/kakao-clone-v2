@@ -1,1 +1,36 @@
 @import "reset.css";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+@import "status-bar.css";
+@import "header.css";
+@import "nav-bar.css";
+
+* {
+  box-sizing: border-box;
+  /* default value - content-box 
+    박스의 크기를 어떤 것을 기준으로 계산할지 정하는 속성
+    
+     ex) box-sizing: content-box 일 때,
+     div의 width: 500px로 설정하면
+     div 내부 컨텐트 영역이 500px로 설정
+     padding을 추가할 수록.. 전체 박스의 크기는 점점 커짐 ㅠ
+     
+     box-sizing: border-box일 때,
+     div의 width: 500px로 설정하면
+     테두리를 포함한 크기가 500px이고, 컨텐트 영역은 500px 미만이 됨
+     padding을 추가할수록 내부컨텐트영역이 줄고, 전체 박스 크기는 변화 없음!
+     
+     자주 쓰이는 방법으로, 꼭 기억해둬! */
+}
+
+body {
+  background-color: white;
+  padding: 10px 20px;
+  color: #020202;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+a {
+  color: inherit;
+  /* get the color of the father's */
+}
