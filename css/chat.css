@@ -1,0 +1,151 @@
+.chat-body {
+  background-image: url("../imgs/chatBackground.png");
+  padding: 0;
+}
+
+.chat-body .chat__above {
+  background-color: white;
+  padding-bottom: 30px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.chat-body .status-bar,
+.chat-body .header {
+  padding: 0px 20px;
+}
+
+.chat-body .status-bar {
+  padding-top: 10px;
+}
+
+.chat-screen {
+  min-height: 100vh; /* vh == viewport height ; 스크린의 높이*/
+}
+
+.chat__write {
+  background-color: #fcfcfc;
+  border-radius: 40px;
+  position: fixed;
+  width: 80%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+}
+
+.chat__write i {
+  font-size: 22px;
+}
+
+.chat__write-column:nth-child(2) {
+  width: 80%;
+}
+
+.chat__write-column input {
+  padding: 20px 10px;
+  width: 100%;
+  border: none; /*input 상자의 border 없앰*/
+  font-size: 14px;
+}
+
+/* focus상태시 윤곽에 잡히던 파란색 색상을 없앰 */
+.chat__write-column input:focus {
+  outline: none;
+}
+
+.chat__write-column .chat__write-icon {
+  padding: 0px 2px;
+}
+
+.chat-screen .chat__messages {
+  border-top: 1px solid #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px;
+  padding-top: 30px;
+}
+
+.chat__messages .chat__timestamp {
+  background-color: white;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 21px #e7eeef;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.message .message__content {
+  width: 100%;
+}
+
+.incoming-msg {
+  align-self: flex-start;
+  /* align-self ; 해당 flex item의 align-items값을 덮어씀 */
+}
+
+.incoming-msg img {
+  width: 40px;
+  border-radius: 15px;
+  margin-right: 15px;
+}
+
+.incoming-msg .message-box .message__bubble {
+  border-bottom-left-radius: 0;
+  background-image: linear-gradient(to right, #fdc830, #f37335);
+}
+
+.sent-msg {
+  align-self: flex-end;
+}
+
+.sent-msg .message-box .message__bubble {
+  border-bottom-right-radius: 0;
+  background-image: linear-gradient(to left, #fdc830, #f37335);
+}
+
+.message__content .message__author {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.message .message-box {
+  display: flex;
+  align-items: center;
+}
+
+.message-box .message__bubble {
+  color: white;
+  font-weight: 400;
+  background-color: white;
+  box-shadow: 0 10px 21px #e7eeef;
+  padding: 10px 20px;
+  border-radius: 30px;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.message-box .message__timestamp {
+  margin-top: 20px;
+  font-size: 10px;
+}
