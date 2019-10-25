@@ -25,45 +25,59 @@
   min-height: 100vh; /* vh == viewport height ; 스크린의 높이*/
 }
 
-.chat__write {
-  background-color: #fcfcfc;
-  border-radius: 40px;
+.chat__write-container {
+  /* background-color: #fcfcfc; */
   position: fixed;
-  width: 80%;
   margin: 0 auto;
   left: 0;
   right: 0;
-  bottom: 50px;
-  padding: 0px 20px;
+  bottom: 0;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
-    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
 }
 
-.chat__write i {
-  font-size: 22px;
-}
-
-.chat__write-column:nth-child(2) {
-  width: 80%;
-}
-
-.chat__write-column input {
-  padding: 20px 10px;
+.chat__write {
+  bottom: 0px;
   width: 100%;
-  border: none; /*input 상자의 border 없앰*/
+  padding: 20px 60px;
+  border: none;
   font-size: 14px;
+  transition: width 0.5s ease-in-out;
 }
 
 /* focus상태시 윤곽에 잡히던 파란색 색상을 없앰 */
-.chat__write-column input:focus {
+.chat__write:focus {
   outline: none;
+  width: 90%;
+  margin: 0 auto;
+  /*   margin: 0 auto 40px auto; */
+  border-radius: 40px;
+  /* box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025); */
 }
 
-.chat__write-column .chat__write-icon {
-  padding: 0px 2px;
+.chat__write:focus ~ .chat__write-icon {
+  /* display: none;
+  focus시 애니메이션을 할 수 없음!
+  그래서 opacity: 0; 으로 준다 */
+  opacity: 0;
+}
+
+.chat__write-icon-left {
+  position: absolute;
+  left: 20px;
+}
+
+.chat__write-icon-right {
+  position: absolute;
+  right: 20px;
+}
+
+.chat__write-icon {
+  font-size: 18px;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .chat-screen .chat__messages {
